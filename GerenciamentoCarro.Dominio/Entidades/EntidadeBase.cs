@@ -4,9 +4,8 @@ using System.Text;
 
 namespace GerenciamentoCarro.Dominio.Entidades
 {
-    public class Marca : EntidadeBase
+    public class EntidadeBase
     {
-        public string Nome { get; set; }
-        public string OrigemMarca { get; set; }
+        public int Id { get; set; }
     }
 }

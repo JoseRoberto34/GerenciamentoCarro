@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.Swagger;
 
 namespace GerenciamentoCarro.Servicos.API
@@ -24,20 +25,17 @@ namespace GerenciamentoCarro.Servicos.API
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc(
-            //        "v1",
-            //        new Info
-            //        {
-            //            version = "V1.1.0",
-            //            title = "Documento da API de Gerenciamento de Carros"
-            //        });
-            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Version = "V1.1.0",   Title = "Documento da API de Gerenciamento de Carros"});
+
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GerenciamentoCarro.Dominio.Entidades
+namespace GerenciamentoCarro.Aplicacao.DTO
 {
-    public class Marca : EntidadeBase
+    public class MarcaDTO : BaseDTO
     {
         public string Nome { get; set; }
         public string OrigemMarca { get; set; }

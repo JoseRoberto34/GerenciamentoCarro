@@ -6,12 +6,7 @@ using System.Text;
 
 namespace GerenciamentoCarro.Dominio.Interfaces.Repositorios
 {
-    public interface IMarcaRepositorio
+    public interface IMarcaRepositorio : IRepositorioBase<Marca>
     {
-        public void  Incluir(Marca marca);
-        public List<Marca> Lista(Marca marca);
-        public int BuscarPorId(int id);
-        public int Altera(Marca marca);
-        public int Deleta(int id);
     }
 }
